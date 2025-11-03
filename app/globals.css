@@ -2,7 +2,10 @@
 
 :root {
   --background: #ffffff;
+  --cinza: #F3F4F6;
   --foreground: #171717;
+  --cor1: #4F39F6;
+  --cor2: #4f39f6c7;
 }
 
 @theme inline {
