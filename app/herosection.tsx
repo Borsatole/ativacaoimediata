@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/image";
 import { HiOutlineUser } from "react-icons/hi";
 
 export default function Hero() {
@@ -11,13 +11,16 @@ export default function Hero() {
             Pague online e receba na hora com segurança
           </h1>
           <p className="mt-4 text-gray-600 dark:text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0">
-            Compre seu código de recarga pela nossa plataforma ou, se preferir, pelo WhatsApp.
+            Compre seu código de recarga pela nossa plataforma ou, se preferir,
+            pelo WhatsApp.
           </p>
 
           {/* Botões */}
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full">
             <a
-              href="https://conectfacil.playnetapp.com/" title='Area Do Cliente' target='blank'
+              href="https://conectfacil.playnetapp.com/"
+              title="Area Do Cliente"
+              target="blank"
               className="bg-(--cor1) hover:bg-(--cor2) flex items-center justify-center text-white font-medium 
               px-6 py-4 rounded-xl shadow-md transition-all duration-300 focus:ring-4 focus:ring-(--cor2) 
               w-full sm:w-auto sm:min-w-[220px]"
@@ -25,16 +28,13 @@ export default function Hero() {
               <HiOutlineUser className="mr-2 text-lg" />
               Área do Cliente
             </a>
-
-           
           </div>
         </div>
-
 
         {/* Imagem */}
         <div className="mt-10 lg:mt-0 lg:col-span-6 flex justify-center">
           <Image
-            src="/Plataforma.png"
+            src="/onlinepreview.png"
             title="Logotipo Recarga Imediata"
             alt="Plataforma de recarga"
             width={500}
@@ -45,5 +45,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,46 +1,72 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 function Footer() {
   return (
-    
-
-<footer className="bg-white rounded-lg shadow-sm dark:bg-gray-900 m-4">
-    <div className="w-full max-w-7xl mx-auto p-4 md:py-8">
+    <footer className="bg-white rounded-lg shadow-sm dark:bg-gray-900 m-4">
+      <div className="w-full max-w-7xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
-            <a href="#" title='logotipo Recarga Imediata' className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <Image
-                src="/LOGOROXA.png"
-                title="Logotipo Recarga Imediata"
-                alt="Logotipo Recarga Imediata"
-                width={150}
-                height={150}
-                unoptimized
-                className="object-cover"
-                />
-            </a>
-            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                <li>
-                    <a href="#" title='Sobre' className="hover:underline me-4 md:me-6">Sobre</a>
-                </li>
-                <li>
-                    <a href="#" title='Politica de Privacidade' className="hover:underline me-4 md:me-6">Politica de Privacidade</a>
-                </li>
-                <li>
-                    <a href="#" title='Licensing' className="hover:underline me-4 md:me-6"> Licensing</a>
-                </li>
-                <li>
-                    <a href="#" title='Contact' className="hover:underline">Contato</a>
-                </li>
-            </ul>
+          <a
+            href="#"
+            title="logotipo Recarga Imediata"
+            className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+          >
+            <Image
+              src="/logotipo_roxa.png"
+              title="Logotipo Recarga Imediata"
+              alt="Logotipo Recarga Imediata"
+              width={150}
+              height={150}
+              className="object-cover"
+            />
+          </a>
+          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+            <li>
+              <a
+                href="#"
+                title="Sobre"
+                className="hover:underline me-4 md:me-6"
+              >
+                Sobre
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                title="Politica de Privacidade"
+                className="hover:underline me-4 md:me-6"
+              >
+                Politica de Privacidade
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                title="Licensing"
+                className="hover:underline me-4 md:me-6"
+              >
+                {" "}
+                Licensing
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Contact" className="hover:underline">
+                Contato
+              </a>
+            </li>
+          </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">{new Date().getFullYear()} © <a title='Recarga Imediata' href="#" className="hover:underline">Recarga Imediata™</a>. Todos Direitos Reservados.</span>
-    </div>
-</footer>
-
-
-  )
+        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          {new Date().getFullYear()} ©{" "}
+          <a title="Recarga Imediata" href="#" className="hover:underline">
+            Recarga Imediata™
+          </a>
+          . Todos Direitos Reservados.
+        </span>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

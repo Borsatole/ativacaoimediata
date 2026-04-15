@@ -1,25 +1,29 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { HiOutlineUser } from 'react-icons/hi'
+import Image from "next/image";
+import Link from "next/link";
+import { HiOutlineUser } from "react-icons/hi";
 
 export default function Navbar() {
   return (
     <header className="bg-white border-b border-gray-200">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-        
         {/* Logo centralizada no mobile */}
         <div className="flex-1 flex justify-center lg:justify-start">
-          <Link href="/" title="Logotipo Recarga Imediata" className="flex items-center">
+          <Link
+            href="/"
+            title="Logotipo Recarga Imediata"
+            className="flex items-center"
+          >
             <Image
-              src="/LOGOROXA.png"
+              src="/logotipo_roxa.png"
               title="Logotipo Recarga Imediata"
               alt="Logo da Empresa"
               width={60}
               height={60}
               unoptimized
               className="h-15 w-auto"
+              priority
             />
           </Link>
         </div>
@@ -37,5 +41,5 @@ export default function Navbar() {
         </div>
       </nav>
     </header>
-  )
+  );
 }

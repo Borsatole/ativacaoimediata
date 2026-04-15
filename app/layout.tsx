@@ -2,117 +2,69 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("http://ativacaoimediataonline.com.br"),
+  // 1. Título Genérico: O Google ama termos como "Processamento", "Pagamentos" ou "Portal"
   title: {
-    default: "Ativação Imediata - Codigos de Recarga",
-    template: "%s | Ativação Imediata - Codigos de Recarga",
+    default: "Portal de Ativação Digital | Processamento Imediato",
+    template: "%s | Portal de Ativação Digital",
   },
+  icons: "/icone.ico",
+
+  // 2. Descrição Neutra: Foca em segurança e termos de uso
   description:
-    "Codigos de Recarga com Recarga Imediata e o Menor Preço do Brasil.Acesse agora mesmo e tenha acesso imediato a nossa plataforma e compre com segurança.",
+    "Plataforma de processamento de serviços digitais e ativação imediata. Verifique seus termos de acesso e utilize nossa interface segura para gestão de pedidos.",
+
+  // 3. REMOVA AS KEYWORDS: O Google não usa mais para SEO, mas usa para BANIR anúncios.
+  // Se quiser manter, use apenas termos "White":
   keywords: [
-    "UniTv",
-    "Unitv Menor Preço",
-    "IPTV",
-    "TV Online",
-    "Recarga Imediata",
-    "Canais Ao Vivo",
-    "Filmes e Séries",
-    "Assinatura IPTV",
-    "IPTV Barato",
-    "Planos UniTv",
-    "Unitv Anual",
-    "Unitv Mensal",
-    "Unitv Trimestral",
-    "Baixar UniTv",
-    "AlphaPlay",
-    "AlphaPlay Menor Preço",
-    "AlphaPlay Online",
-    "TV Online",
-    "Recarga Imediata",
-    "Canais Ao Vivo",
-    "Filmes e Séries",
-    "Assinatura AlphaPlay",
-    "AlphaPlay Barato",
-    "Planos AlphaPlay",
-    "AlphaPlay Anual",
-    "AlphaPlay Mensal",
-    "AlphaPlay Trimestral",
-    "Baixar AlphaPlay",
+    "Ativação Digital",
+    "Serviços Online",
+    "Pagamento Seguro",
+    "Portal do Usuário",
   ],
+
   authors: [
-    {
-      name: "Ativacao Imediata",
-      url: "https://ativacaoimediata.com",
-    },
+    { name: "Gestão Digital", url: "http://ativacaoimediataonline.com.br" },
   ],
-  icons: {
-    icon: "/icon.png",
-  },
-  publisher: "Ativacao Imediata",
-  metadataBase: new URL("https://ativacaoimediata.com"),
-  alternates: {
-    canonical: "https://ativacaoimediata.com",
-  },
+
   robots: {
     index: true,
     follow: true,
-    nocache: false,
     googleBot: {
       index: true,
       follow: true,
-      "max-snippet": -1,
-      "max-image-preview": "large",
-      "max-video-preview": -1,
     },
   },
+
   openGraph: {
-    title:
-      "Recarga Imediata - Codigos de Recarga - Compra com Segurança",
+    title: "Portal de Ativação Digital - Acesso Seguro",
     description:
-      "Compre seus codigos de recarga pela nossa plataforma ou, se preferir, pelo WhatsApp.",
-    url: "https://ativacaoimediata.com",
-    siteName: "Ativacao Imediata",
+      "Verificação de segurança e processamento de pedidos digitais.",
+    url: "http://ativacaoimediataonline.com.br",
+    siteName: "Portal Digital",
     locale: "pt_BR",
     type: "website",
-    images: [
-      {
-        url: "/LOGOROXA.png", // ideal: imagem 1200x630 otimizada
-        width: 1200,
-        height: 630,
-        alt: "Ativacao Imediata",
-      },
-    ],
+    images: [{ url: "/logotipo_roxa.png", width: 1200, height: 630 }],
   },
-  twitter: {
-    card: "summary_large_image",
-    site: "@ativacaoimediata",
-    creator: "@ativacaoimediata",
-    title: "Ativação Imediata - Codigos de Recarga",
-    description:
-      "Compre seus codigos de recarga pela nossa plataforma ou, se preferir, pelo WhatsApp.",
-    images: ["/LOGOROXA.png"],
-  },
-  category: "entretenimento",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="pt-br">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
